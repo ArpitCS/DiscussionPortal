@@ -1,0 +1,174 @@
+:root {
+  --primary-bg: #16423c;
+  --secondary-bg: #1e5d55;
+  --text-color: #c4dad2;
+  --accent-color: #e9efec;
+  --button-hover: #4f594e;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  background-color: var(--accent-color);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#main {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+}
+
+h2 {
+  color: var(--text-color);
+  text-align: center;
+}
+
+#questions {
+  background-color: var(--primary-bg);
+  width: 45%;
+  min-height: 80vh;
+  border-radius: 30px;
+  padding: 20px;
+  margin: 10px 0;
+  color: var(--primary-bg);
+}
+
+#questions h2 {
+  font-size: 1.5rem;
+}
+
+#questionView {
+  background-color: var(--secondary-bg);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  color: var(--text-color);
+}
+
+.question-card {
+  background-color: var(--secondary-bg);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  color: var(--primary-bg);
+}
+
+.question-card:hover {
+  background-color: #2f302b;
+  transform: scale(1.02);
+}
+
+.question-card .badge {
+  background-color: var(--text-color);
+  color: var(--text-color);
+  font-size: 0.9rem;
+  border-radius: 25px;
+}
+
+#topBar {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#topBar input {
+  flex-grow: 1;
+  padding: 0.75em;
+  border-radius: 10px;
+  border: 1px solid var(--text-color);
+  background-color: var(--text-color);
+  color: var(--secondary-bg);
+}
+
+#topBar button {
+  background-color: var(--text-color);
+  color: var(--primary-bg);
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+#topBar button:hover {
+  background-color: var(--button-hover);
+  color: var(--accent-color);
+}
+
+#right-pane {
+  color: var(--primary-bg);
+  background-color: var(--accent-color);
+  padding: 20px;
+  min-height: 100vh;
+  border-radius: 0;
+}
+
+form input[type="text"],
+form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 10px;
+  border: 1px solid var(--text-color);
+  background-color: var(--accent-color);
+  color: var(--primary-bg);
+}
+
+form button[type="submit"] {
+  background-color: var(--primary-bg);
+  color: var(--accent-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+form button[type="submit"]:hover {
+  background-color: var(--secondary-bg);
+}
+
+.resolve-btn {
+  background-color: #d9534f;
+  color: var(--accent-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.resolve-btn:hover {
+  background-color: #c9302c;
+  color: var(--light-bg);
+}
+
+#questions,
+#right-pane {
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.rounded-box {
+  border: 1px solid var(--accent-color);
+  border-radius: 15px;
+  background-color: var(--light-bg);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  color: var(--primary-bg);
+}
+
+.response-box {
+  border: 1px solid var(--primary-bg);
+  border-radius: 10px;
+  background-color: var(--accent-color);
+  color: var(--primary-bg);
+}
